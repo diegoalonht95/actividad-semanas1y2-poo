@@ -1,4 +1,4 @@
- #Actividad Semanas 1 y 2 - POO
+ Actividad Semanas 1 y 2 - POO
 
 Proyecto realizado en Java para aplicar los temas vistos en las semanas 1 y 2.
 
@@ -8,7 +8,7 @@ En la segunda parte se aplicó herencia con las clases ClienteVIP y ProductoPere
 
  
  
- ##Archivos principales
+ Archivos principales
 
 - Cliente.java
 - ClienteVIP.java
@@ -17,9 +17,9 @@ En la segunda parte se aplicó herencia con las clases ClienteVIP y ProductoPere
 - Pedido.java
 - Main.java
 
- ##Diagramas
+ Diagramas
 
 - semana1.png
 - semana2.png
 
-Para probar el programa se debe ejecutar `Main.java`.
+Para probar el programa se debe ejecutar Main.java.
