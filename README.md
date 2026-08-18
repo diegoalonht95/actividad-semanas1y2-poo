@@ -1,56 +1,23 @@
-# Actividad Semanas 1 y 2 - Programación Orientada a Objetos
+ Actividad Semanas 1 y 2 - POO
 
-Actividad correspondiente a las semanas 1 y 2 de Programación Orientada a Objetos.
+Proyecto realizado en Java para aplicar los temas vistos en las semanas 1 y 2.
 
-## Descripción
+En la primera parte se trabajó con clases, objetos y encapsulación utilizando las clases Cliente y Producto.
 
-Se desarrolló un sistema básico de gestión de pedidos utilizando Java, aplicando los conceptos de:
+En la segunda parte se aplicó herencia con las clases ClienteVIP y ProductoPerecible. También se utilizó la clase Pedido para relacionar un cliente con varios productos.
 
-- Clases y objetos
-- Encapsulación
-- Getters y setters
-- Herencia
-- Composición
-- Diagramas UML
+ Archivos principales
 
-## Clases principales
+- Cliente.java
+- ClienteVIP.java
+- Producto.java
+- ProductoPerecible.java
+- Pedido.java
+- Main.java
 
-- `Cliente`
-- `Producto`
-- `ClienteVIP`
-- `ProductoPerecible`
-- `Pedido`
-- `Main`
+ Diagramas
 
-## Semana 1
+- semana1.png
+- semana2.png
 
-Se implementaron las clases `Cliente` y `Producto`, utilizando atributos privados y métodos públicos para aplicar encapsulación.
-
-## Semana 2
-
-Se implementó herencia mediante:
-
-- `ClienteVIP` hereda de `Cliente`
-- `ProductoPerecible` hereda de `Producto`
-
-También se utilizó composición en la clase `Pedido`, que contiene un cliente y una lista de productos.
-
-## Diagramas UML
-
-El repositorio contiene los diagramas correspondientes a:
-
-- `semana1.png`
-- `semana2.png`
-
-## Tecnología utilizada
-
-- Java
-- Programación Orientada a Objetos
-
-## Ejecución
-
-Ejecutar la clase:
-
-`Main.java`
-
-Esta clase crea objetos de ejemplo y muestra el funcionamiento del sistema de pedidos.
+Para probar el programa se debe ejecutar `Main.java`.
