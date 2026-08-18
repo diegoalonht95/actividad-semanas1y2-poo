@@ -17,7 +17,7 @@ En la segunda parte se aplicó herencia con las clases ClienteVIP y ProductoPere
 - Pedido.java
 - Main.java
 
- Diagramas
+ ##Diagramas
 
 - semana1.png
 - semana2.png
