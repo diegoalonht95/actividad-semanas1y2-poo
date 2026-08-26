@@ -1,6 +1,7 @@
 package ec.edu.uees.sistemapedidos;
 
-public class Cliente {
+public abstract class Cliente {
+
     private String cedula;
     private String nombre;
     private String correo;
@@ -11,14 +12,31 @@ public class Cliente {
         this.correo = correo;
     }
 
-    public String getCedula() { return cedula; }
-    public void setCedula(String cedula) { this.cedula = cedula; }
+    public String getCedula() {
+        return cedula;
+    }
 
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
 
-    public String getCorreo() { return correo; }
-    public void setCorreo(String correo) { this.correo = correo; }
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public abstract double calcularDescuento(double subtotal);
 
     public String mostrarInformacion() {
         return nombre + " | Cédula: " + cedula + " | Correo: " + correo;

@@ -38,12 +38,11 @@ public class Pedido {
     }
 
     public double calcularTotal() {
-        double subtotal = calcularSubtotal();
-        if (cliente instanceof ClienteVIP clienteVIP) {
-            return clienteVIP.aplicarDescuento(subtotal);
-        }
-        return subtotal;
-    }
+       double subtotal = calcularSubtotal();
+       double descuento = cliente.calcularDescuento(subtotal);
+
+    return subtotal - descuento;
+}
 
     public void mostrarResumen() {
         System.out.println("\n=== PEDIDO #" + numero + " ===");
