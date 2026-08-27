@@ -1,0 +1,9 @@
+
+=== PEDIDO #1 ===
+Cliente: Diego Herrera | C?dula: 0912345678 | Correo: diego@email.com | Cliente VIP (10% descuento)
+Productos:
+- P001 - Hamburguesa - $5.50
+- P002 - Jugo Natural - $2.00
+- P003 - Yogurt - $3.50 | Caduca: 30/08/2026
+Subtotal: $11.00
+Total:    $9.90
