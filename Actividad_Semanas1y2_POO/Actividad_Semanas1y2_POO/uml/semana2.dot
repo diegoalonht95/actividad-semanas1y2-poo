@@ -1,0 +1,13 @@
+digraph UML {
+  graph [rankdir=TB, bgcolor="white", nodesep=0.55, ranksep=0.8];
+  node [shape=record, fontname="DejaVu Sans", fontsize=10, margin="0.10,0.06"];
+  Producto [label="{Producto| - codigo: String\l - nombre: String\l - precio: double\l| + mostrarInformacion(): String\l}"];
+  ProductoPerecible [label="{ProductoPerecible| - fechaCaducidad: String\l| + mostrarInformacion(): String\l}"];
+  Cliente [label="{Cliente| - cedula: String\l - nombre: String\l - correo: String\l| + mostrarInformacion(): String\l}"];
+  ClienteVIP [label="{ClienteVIP| - descuento: double\l| + aplicarDescuento(subtotal): double\l + mostrarInformacion(): String\l}"];
+  Pedido [label="{Pedido| - numero: int\l - cliente: Cliente\l - productos: List\<Producto\>\l| + agregarProducto(producto): void\l + calcularSubtotal(): double\l + calcularTotal(): double\l + mostrarResumen(): void\l}"];
+  ProductoPerecible -> Producto [arrowhead=empty, label=" hereda"];
+  ClienteVIP -> Cliente [arrowhead=empty, label=" hereda"];
+  Pedido -> Cliente [arrowhead=diamond, dir=both, label=" 1"];
+  Pedido -> Producto [arrowhead=diamond, dir=both, label=" 1..*"];
+}

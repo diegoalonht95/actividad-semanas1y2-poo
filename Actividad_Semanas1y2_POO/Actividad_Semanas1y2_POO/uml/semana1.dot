@@ -1,0 +1,6 @@
+digraph UML {
+  graph [rankdir=LR, bgcolor="white", nodesep=0.8, ranksep=1.0];
+  node [shape=record, fontname="DejaVu Sans", fontsize=11, margin="0.12,0.08"];
+  Producto [label="{Producto| - codigo: String\l - nombre: String\l - precio: double\l| + Producto(codigo, nombre, precio)\l + getCodigo(): String\l + setCodigo(codigo): void\l + getNombre(): String\l + setNombre(nombre): void\l + getPrecio(): double\l + setPrecio(precio): void\l + mostrarInformacion(): String\l}"];
+  Cliente [label="{Cliente| - cedula: String\l - nombre: String\l - correo: String\l| + Cliente(cedula, nombre, correo)\l + getCedula(): String\l + setCedula(cedula): void\l + getNombre(): String\l + setNombre(nombre): void\l + getCorreo(): String\l + setCorreo(correo): void\l + mostrarInformacion(): String\l}"];
+}
