@@ -1,43 +1,64 @@
-# Actividad Semanas 1, 2 y 3 - POO
+# Sistema de Pedidos - Semanas 5 y 6
 
-Proyecto realizado en Java para aplicar los temas vistos en las primeras tres semanas de Programación Orientada a Objetos.
+## Descripción
 
-## Semana 1
+Este proyecto corresponde a las actividades de las semanas 5 y 6 de Programación Orientada a Objetos.
 
-Se trabajó con clases, objetos y encapsulación utilizando las clases `Cliente` y `Producto`.
+Durante estas semanas se implementó un catálogo de productos utilizando colecciones y genéricos en Java, además de una interfaz gráfica desarrollada con JavaFX.
 
-## Semana 2
+## Tecnologías utilizadas
 
-Se aplicó herencia mediante las clases `ClienteVIP` y `ProductoPerecible`. También se utilizó la clase `Pedido` para relacionar un cliente con varios productos.
+- Java 21
+- JavaFX
+- Maven
+- Visual Studio Code
 
-## Semana 3
+## Colecciones utilizadas
 
-Se incorporaron los conceptos de polimorfismo, clases abstractas y sobrescritura de métodos.
+El catálogo utiliza las siguientes colecciones:
 
-La clase `Cliente` fue definida como clase abstracta y contiene el método `calcularDescuento(double subtotal)`.
+- `ArrayList<Producto>`: almacena los productos registrados.
+- `HashMap<String, Producto>`: permite buscar productos mediante su código.
+- `HashSet<String>`: evita que se registren códigos duplicados.
 
-Las clases `ClienteMayorista`, `ClienteMinorista` y `ClienteVIP` heredan de `Cliente` y sobrescriben este método con un comportamiento diferente.
+## Funcionalidades
 
-- `ClienteMayorista`: aplica un descuento del 15%.
-- `ClienteMinorista`: aplica un descuento del 5%.
-- `ClienteVIP`: aplica el porcentaje de descuento definido para el cliente.
+La aplicación permite:
 
-La clase `Pedido` trabaja con una referencia de tipo `Cliente` y utiliza el método `calcularDescuento()` sin condicionales para determinar el tipo de cliente. De esta manera se aplica polimorfismo.
+- Agregar productos.
+- Buscar productos por código.
+- Listar productos.
+- Actualizar productos.
+- Eliminar productos.
+- Evitar registros duplicados.
+- Validar los datos ingresados.
 
-## Archivos principales
+## Interfaz gráfica
 
-- `Cliente.java`
-- `ClienteVIP.java`
-- `ClienteMayorista.java`
-- `ClienteMinorista.java`
-- `Producto.java`
-- `ProductoPerecible.java`
-- `Pedido.java`
-- `Main.java`
+La interfaz fue desarrollada utilizando JavaFX.
 
-## Diagramas
+Incluye:
 
-- `semana1.png`
-- `semana2.png`
+- Campo de código.
+- Campo de nombre.
+- Campo de precio.
+- Tabla de productos.
+- Botón Agregar.
+- Botón Buscar.
+- Botón Actualizar.
+- Botón Eliminar.
+- Botón Limpiar.
 
-Para probar el programa se debe ejecutar `Main.java`.
+Los botones utilizan manejo de eventos para ejecutar las operaciones del catálogo.
+
+## Cómo ejecutar el proyecto
+
+Se necesita:
+
+- Java JDK 21.
+- Apache Maven.
+
+Desde la carpeta donde se encuentra el archivo `pom.xml`, ejecutar:
+
+```bash
+mvn clean javafx:run
