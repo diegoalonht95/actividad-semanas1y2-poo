@@ -1,64 +1,59 @@
-# Sistema de Pedidos - Semanas 5 y 6
+# Sistema de Pedidos - Semana 7
+
+Proyecto desarrollado en Java para aplicar los conceptos de tipos de datos abstractos lineales, patrón Repository y pruebas unitarias.
 
 ## Descripción
 
-Este proyecto corresponde a las actividades de las semanas 5 y 6 de Programación Orientada a Objetos.
+El sistema administra pedidos utilizando una cola implementada manualmente.
 
-Durante estas semanas se implementó un catálogo de productos utilizando colecciones y genéricos en Java, además de una interfaz gráfica desarrollada con JavaFX.
+La cola sigue el principio FIFO:
 
-## Tecnologías utilizadas
+**First In, First Out**
 
-- Java 21
-- JavaFX
-- Maven
-- Visual Studio Code
+Esto significa que el primer pedido que ingresa es el primero en ser procesado.
 
-## Colecciones utilizadas
+## Estructura de datos utilizada
 
-El catálogo utiliza las siguientes colecciones:
+Se implementó manualmente una cola utilizando las clases:
 
-- `ArrayList<Producto>`: almacena los productos registrados.
-- `HashMap<String, Producto>`: permite buscar productos mediante su código.
-- `HashSet<String>`: evita que se registren códigos duplicados.
+- `Nodo`
+- `ColaPedidos`
 
-## Funcionalidades
+La cola permite:
 
-La aplicación permite:
+- Agregar elementos.
+- Eliminar elementos.
+- Consultar el siguiente elemento.
+- Verificar si está vacía.
+- Consultar la cantidad de elementos.
 
-- Agregar productos.
-- Buscar productos por código.
-- Listar productos.
-- Actualizar productos.
-- Eliminar productos.
-- Evitar registros duplicados.
-- Validar los datos ingresados.
+No se utilizaron directamente `Queue`, `LinkedList` ni `ArrayDeque`.
 
-## Interfaz gráfica
+## Patrón Repository
 
-La interfaz fue desarrollada utilizando JavaFX.
+Se implementó el patrón Repository mediante:
 
-Incluye:
+- `PedidoRepository`
+- `PedidoRepositoryImpl`
 
-- Campo de código.
-- Campo de nombre.
-- Campo de precio.
-- Tabla de productos.
-- Botón Agregar.
-- Botón Buscar.
-- Botón Actualizar.
-- Botón Eliminar.
-- Botón Limpiar.
+El Repository separa el manejo de los datos de la lógica principal de la aplicación.
 
-Los botones utilizan manejo de eventos para ejecutar las operaciones del catálogo.
+`PedidoRepositoryImpl` utiliza internamente `ColaPedidos` para administrar los pedidos.
 
-## Cómo ejecutar el proyecto
+## Pruebas unitarias
 
-Se necesita:
+Las pruebas fueron desarrolladas con JUnit 5.
 
-- Java JDK 21.
-- Apache Maven.
+Se realizaron 6 pruebas para comprobar:
 
-Desde la carpeta donde se encuentra el archivo `pom.xml`, ejecutar:
+- Cola inicialmente vacía.
+- Agregar elementos.
+- Consultar el primer elemento.
+- Orden FIFO.
+- Actualización de la cantidad.
+- Cola vacía después de eliminar todos los elementos.
 
-```bash
-mvn clean javafx:run
+Resultado:
+
+```text
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
