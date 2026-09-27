@@ -1,64 +1,65 @@
-# Sistema de Pedidos - Semanas 5 y 6
+# Sistema de Pedidos - Semana 7
+
+Proyecto desarrollado en Java para aplicar los conceptos de tipos de datos abstractos lineales, patrón Repository y pruebas unitarias.
 
 ## Descripción
 
-Este proyecto corresponde a las actividades de las semanas 5 y 6 de Programación Orientada a Objetos.
+El sistema administra pedidos utilizando una cola implementada manualmente.
 
-Durante estas semanas se implementó un catálogo de productos utilizando colecciones y genéricos en Java, además de una interfaz gráfica desarrollada con JavaFX.
+La cola permite procesar los pedidos siguiendo el principio FIFO:
 
-## Tecnologías utilizadas
+First In, First Out.
 
-- Java 21
-- JavaFX
-- Maven
-- Visual Studio Code
+Esto significa que el primer pedido que ingresa es el primero en ser procesado.
 
-## Colecciones utilizadas
+## Estructura de datos utilizada
 
-El catálogo utiliza las siguientes colecciones:
+Se implementó una cola propia sin utilizar directamente Queue, LinkedList o ArrayDeque de Java.
 
-- `ArrayList<Producto>`: almacena los productos registrados.
-- `HashMap<String, Producto>`: permite buscar productos mediante su código.
-- `HashSet<String>`: evita que se registren códigos duplicados.
+La cola incluye las siguientes operaciones:
 
-## Funcionalidades
+- Encolar un elemento.
+- Desencolar un elemento.
+- Consultar el primer elemento.
+- Verificar si la cola está vacía.
+- Consultar la cantidad de elementos.
 
-La aplicación permite:
+## Patrón Repository
 
-- Agregar productos.
-- Buscar productos por código.
-- Listar productos.
-- Actualizar productos.
-- Eliminar productos.
-- Evitar registros duplicados.
-- Validar los datos ingresados.
+Se implementó el patrón Repository para separar el manejo de los datos de la lógica principal del sistema.
 
-## Interfaz gráfica
+Las principales clases utilizadas son:
 
-La interfaz fue desarrollada utilizando JavaFX.
+- PedidoRepository
+- PedidoRepositoryImpl
+- ColaPedidos
+- Nodo
+- Pedido
 
-Incluye:
+PedidoRepository define las operaciones disponibles.
 
-- Campo de código.
-- Campo de nombre.
-- Campo de precio.
-- Tabla de productos.
-- Botón Agregar.
-- Botón Buscar.
-- Botón Actualizar.
-- Botón Eliminar.
-- Botón Limpiar.
+PedidoRepositoryImpl implementa estas operaciones y utiliza internamente ColaPedidos para administrar los pedidos.
 
-Los botones utilizan manejo de eventos para ejecutar las operaciones del catálogo.
+## Pruebas unitarias
 
-## Cómo ejecutar el proyecto
+Las pruebas fueron desarrolladas utilizando JUnit 5.
 
-Se necesita:
+Se implementaron 6 pruebas unitarias para verificar:
 
-- Java JDK 21.
-- Apache Maven.
+- Cola vacía.
+- Agregar elementos.
+- Consultar el primer elemento.
+- Orden FIFO.
+- Actualización de la cantidad.
+- Estado vacío después de eliminar todos los elementos.
 
-Desde la carpeta donde se encuentra el archivo `pom.xml`, ejecutar:
+Resultado obtenido:
+
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0
+
+## Ejecutar el proyecto
+
+Para compilar el proyecto:
 
 ```bash
-mvn clean javafx:run
+mvn clean compile
