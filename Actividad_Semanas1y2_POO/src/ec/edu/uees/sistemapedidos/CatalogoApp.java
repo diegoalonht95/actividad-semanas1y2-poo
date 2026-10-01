@@ -32,7 +32,9 @@ public class CatalogoApp extends Application {
     public void start(Stage stage) {
 
         catalogo = new CatalogoProductos();
-        datosTabla = FXCollections.observableArrayList();
+        datosTabla = FXCollections.observableArrayList(
+                catalogo.listarProductos()
+        );
 
         Label titulo = new Label("CATÁLOGO DE PRODUCTOS");
         titulo.setStyle("-fx-font-size: 22px; -fx-font-weight: bold;");
